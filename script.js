@@ -10,13 +10,6 @@ let timer = () => {
     crono.innerHTML = "Tempo: " + time + 's';
 }
 
-setTimeout(timer, 1000)
-
-if (clicks == 3)
-{
-    document.body.style.backgroundColor = 'red';
-}
-
 btn.onclick = () => {
     let pLeft = Math.floor(Math.random() * 90);
     let pTop = Math.floor(Math.random() * 90);
@@ -24,13 +17,14 @@ btn.onclick = () => {
     btn.style.left = pLeft+'%';
     btn.style.top = pTop+'%';
         
-    count.innerHTML = 'Clicks: ' + clicks;
-    clicks == 20? doido() : clicks++
+    clicks++; count.innerHTML = 'Clicks: ' + clicks;
+    if(clicks == 1){setInterval(timer, 1000)}
+    if(clicks == 20){doido()}
 }
 
 let doido = () => {
+    count.innerHTML = ""
     document.body.style.backgroundImage = "url(assets/medo.jpg)" ;
     audio.play();
     btn.style.display = "none"
-    count.innerHTML = ""
 }
