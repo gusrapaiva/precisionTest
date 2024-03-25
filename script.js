@@ -8,8 +8,7 @@ let timer = () => {
     time++
     crono.innerHTML = "Tempo: " + time + 's';
 }
-
-let interval = setInterval(timer, 1000)
+let interval;
 
 btn.onclick = () => {
     let pLeft = Math.floor(Math.random() * 90);
@@ -19,7 +18,7 @@ btn.onclick = () => {
     btn.style.top = pTop+'%';
         
     clicks++; count.innerHTML = 'Clicks: ' + clicks;
-    if(clicks == 1){interval}
+    if(clicks == 1){interval = setInterval(timer, 1000)}
     if(clicks == 20){doido()}
 }
 
