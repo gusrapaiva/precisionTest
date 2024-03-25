@@ -14,3 +14,9 @@ button{
     top: 10%;
     left: 44%;
 }
+
+#crono{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
