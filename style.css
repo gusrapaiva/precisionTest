@@ -1,0 +1,16 @@
+body{
+    background-size: cover;
+}
+
+button{
+    position: absolute;
+    font-size: 1.1vw;
+    padding: 1vh 2vh;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 10%;
+    left: 44%;
+}
